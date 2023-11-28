@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+:root {
+  --lightGrey: #cbcbcb;
+  --lightMode: #ffd000;
+  --darkMode: #0c62d2;
+  --golden: #ffe324;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/** **/
+.top-header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 30px;
+  font-weight: 400;
+  
+}
+.main {
+  min-height: 100vh;
+  padding: 20px;
+}
+.container-night-mode {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.container-night-mode span {
+  font-weight: 400;
+}
+
+.toggle-button {
+  width: 50px;
+  border-radius: 15px;
+  background-color: var(--lightGrey);
+  padding: 5px;
+  cursor: pointer;
+}
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--lightMode);
+  background-image: url(../assets/img/sol.png);
+  background-size: 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform .5s ease-out, background-color .5s ease-out;
+}
+.night {
+  transform: translate(30px);
+  background-color: var(--darkMode);
+  background-image: url(../assets/img/luna.png);
+  
+}
+.masthead h1 {
+  font-size: 40px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.masthead img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.masthead p {
+  margin-bottom: 20px;
+  line-height: 20px;
+  font-weight: 300;
+}
+
+article {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+h1, p, span, .logo {
+  transition: color 0.5s ease-in-out
+}
+
+.main, .top-header {
+  transition: background-color 0.5s ease-in-out;
+}
+
+.dark-mode p, .dark-mode span {
+  color: white;
+}
+.dark-mode .logo, .dark-mode h1 {
+  color: var(--golden);
+}
+
+.dark-mode .main, .dark-mode .top-header {
+  background-color: black;
+}
+
+
